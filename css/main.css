@@ -1,0 +1,124 @@
+/* 공통 스타일 */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* 헤더영역 */
+header {
+  border-bottom: 1px solid #aaa;
+}
+
+/* 상단배너 */
+.top-banner {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.top-banner .interpark-shop {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 13px 50px 13px 0;
+  background-color: #ffb1a0;
+}
+
+.top-banner img{
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+} 
+
+.top-banner .interpark-shop p{
+  font-size: 14px;
+  line-height: 20px;
+} 
+
+
+.top-banner .interpark-book {
+  width: 50%;
+  display: flex;
+  padding: 13px 0 13px 50px;
+  background-color: #FEC695;
+}
+
+.top-banner .interpark-book p{
+  font-size: 14px;
+  line-height: 20px;
+} 
+
+
+/* 중간영역 */
+.header-middle .inner {
+ display: flex; 
+ margin-top: 20px;
+}
+
+
+.search {
+  align-self: center;
+  position: relative;
+}
+
+.search input {
+  width: 452px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  outline: none;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.search .material-icons {
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin: auto;
+}
+
+.user-menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  align-self: center;
+}
+
+.user-menu > li {
+  margin-left: 20px;
+}
+
+.user-menu > li > a {
+  color: #000;
+  font-size: 14px;
+}
+
+/* 내비게이션 */
+.menu .inner > ul {
+  display: flex;
+  margin-top: 20px;
+}
+
+.menu .inner > ul > li {
+  padding: 20px;
+}
+
+.menu .inner > ul > li > a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.menu .inner ul li:last-child a {
+  color: #1769ff;
+}
