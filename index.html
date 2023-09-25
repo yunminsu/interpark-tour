@@ -5,30 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>인터파크 투어</title>
 
-  <!-- 파비콘 적용 -->
-  <link rel="shortcut icon" href="./images/icon_logo_tour.svg" type="image/x-icon">
+  <!-- CSS -->
   <!-- 기본 스타일 초기화 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
   <!-- 머티리얼 아이콘 적용  -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <!-- SWIPER  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <!-- main.css 적용  -->
   <link rel="stylesheet" href="./css/main.css">
 
+  <!-- JS -->
+  <!-- SWIPER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- main.js 적용 -->
+  <script defer src="./js/main.js"></script>
 </head>
+
 <body>
   <!-- 헤더영역 -->
   <header>
     <!-- 상단배너 -->
     <div class="top-banner">.
       <div class="interpark-shop">
-        <img src="./images/icon_shopping 1.png" alt="인터파크 쇼핑몰">
-        <p>여행에 필요한 상품을 구매할땐?<br>
-          인터파크 쇼핑몰 바로가기</p>
+        <img src="./images/icon_shopping.png" alt="인터파크 쇼핑몰">
+        <p>
+          여행에 필요한 상품을 구매할땐?<br>
+          인터파크 쇼핑몰 바로가기
+        </p>
       </div>
       <div class="interpark-book">
         <img src="./images/icon_book.png" alt="인터파크 도서몰">
-        <p>비행기에서 심심할땐?<br>
-          인터파크 도서 바로가기</p>
+        <p>
+          비행기에서 심심할땐?<br>
+          인터파크 도서 바로가기
+        </p>
       </div>
     </div>
 
@@ -36,7 +49,7 @@
     <div class="header-middle">
       <div class="inner">
         <a href="/" class="logo">
-        <img src="./images/logo.png" alt="interpark 투어">
+         <img src="./images/logo.png" alt="인터파크 투어">
         </a>
         <!-- 검색 -->
         <div class="search">
@@ -61,8 +74,7 @@
 
     <!-- 내비게이션 -->
     <nav class="menu">
-      <div class="inner">
-        <ul>
+        <ul class="inner">
           <li>
             <a href="javascript:void(0)">전체메뉴</a>
           </li>
@@ -91,39 +103,74 @@
             <a href="javascript:void(0)">이벤트</a>
           </li>
         </ul>
-      </div>
     </nav>
   </header>
 
   <!-- 섹션영역 -->
   <!-- 메인 -->
-  <section>
-    <div class="inner">
-      <div class="main-search">
-        <h2>고객님,<br> 어떤 여행을 꿈꾸시나요?</h2>
-        <ul>
-          <li>
-            <a href="javascript:void(0)">패키지</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">항공</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">호텔</a>
-          </li>
-        </ul>
-        <input type="text">
-        <button type="button">출발지 전체</button>
-        <button type="button">여행 시작일 선택</button>
-        <button type="submit">패키지 검색</button>
-      </div>
+  <section class="main-section inner scroll-spy">
+    <div class="main-search">
+      <h2 class="back-to-position to-right">고객님,<br> 어떤 여행을 꿈꾸시나요?</h2>
+      <ul>
+        <li>
+          <a href="javascript:void(0)">패키지</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">항공</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">호텔</a>
+        </li>
+      </ul>
+      <input type="text" placeholder="어디로 떠나세요?">
+      <button type="button">출발지 전체</button>
+      <button type="button">여행 시작일 선택</button>
+      <button type="button">패키지 검색</button>
+    </div>
 
-      <div class="main-banner">
-        <img src="" alt="">
+    <!-- 배너  -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/main_banner01.jpg" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/main_banner02.jpg" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/main_banner03.jpg" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+          <img src="./images/main_banner04.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/main_banner05.jpg" alt="">
+          </a>
+        </div>
       </div>
-
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
+
+  <section class="toursale inner">
+    <h2>투어 특가</h2>
+
+
+
+  </section>
+
+
 
 </body>
 </html>

@@ -9,9 +9,29 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
 
+/* ScrollMagic */
+.back-to-position {
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.back-to-position.to-right {
+  transform: translateX(-200px);
+}
+
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /* 헤더영역 */
+
+/* 헤더 */
 header {
   border-bottom: 1px solid #aaa;
 }
@@ -26,7 +46,7 @@ header {
   width: 50%;
   display: flex;
   justify-content: flex-end;
-  padding: 13px 50px 13px 0;
+  padding: 8px 50px 8px 0;
   background-color: #ffb1a0;
 }
 
@@ -37,7 +57,7 @@ header {
 } 
 
 .top-banner .interpark-shop p{
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
 } 
 
@@ -45,12 +65,12 @@ header {
 .top-banner .interpark-book {
   width: 50%;
   display: flex;
-  padding: 13px 0 13px 50px;
+  padding: 8px 0 8px 50px;
   background-color: #FEC695;
 }
 
 .top-banner .interpark-book p{
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
 } 
 
@@ -85,6 +105,7 @@ header {
   bottom: 0;
   right: 15px;
   margin: auto;
+  cursor: pointer;
 }
 
 .user-menu {
@@ -104,21 +125,151 @@ header {
 }
 
 /* 내비게이션 */
-.menu .inner > ul {
+.menu .inner {
   display: flex;
   margin-top: 20px;
 }
 
-.menu .inner > ul > li {
+.menu .inner > li {
   padding: 20px;
 }
 
-.menu .inner > ul > li > a {
+.menu .inner > li > a {
   font-size: 16px;
   font-weight: bold;
   color: #000;
 }
 
-.menu .inner ul li:last-child a {
+.menu .inner > li > a:hover {
+  text-decoration: underline;
+}
+
+.menu .inner li:last-child a {
   color: #1769ff;
 }
+
+/* 섹션영역 */
+
+/* 메인 */
+.main-section {
+  display: flex;
+}
+
+.main-search {
+  width: 300px;
+  margin-top: 50px;
+}
+
+.main-search h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+}
+
+.main-search ul {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 30px; 
+
+}
+
+.main-search ul > li {
+  margin: 0 auto;
+}
+
+.main-search ul > li > a {
+  color: #000;
+  opacity: 0.8;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.main-search ul > li > a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.main-search input {
+  width: 300px;
+  height: 52px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+
+}
+
+.main-search > button {
+  display: block;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 15px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-search > button:last-child {
+  background-color: #1769ff;
+  color: #fff;
+  height: 52px;
+}
+
+/* 배너 */
+.main-section .swiper {
+  margin-left: 30px;
+  align-self: flex-end;
+  position: relative;
+  border-radius: 5px;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  width: 44px;
+  border: 1px solid #eee;
+  border-radius: 100%;
+  background-color: #eee;
+  opacity: 0.6;
+  position: absolute;
+}
+
+.swiper .swiper-button-prev {
+  left: 0;
+}
+
+.swiper .swiper-button-next {
+  right: 60px;
+}
+
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  font-size: 20px;
+  color: #000;
+}
+
+.swiper .swiper-button-prev:hover,
+.swiper .swiper-button-next:hover {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color:#000;
+  opacity: 0.6;
+  background: #fff;
+  }
+ 
+  .swiper-pagination-bullet-active {
+  color:#fff;
+  background: #1769ff;
+  opacity: 1;
+  }
