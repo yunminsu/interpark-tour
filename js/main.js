@@ -9,8 +9,17 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller());
 });
 
+// 상단배너 닫기
+
+const topbannerEl = document.querySelector('.top-banner');
+const topbannerdeleteBtn = document.querySelector('.top-banner-delete');
+
+topbannerdeleteBtn.addEventListener('click', function () {
+    topbannerEl.classList.add('hide');
+   });
+
 // 배너 슬라이드
-new Swiper('.swiper', {
+new Swiper('.main-section .swiper', {
   loop: true,
   autoplay: {
     delay: 3000,
@@ -30,3 +39,18 @@ new Swiper('.swiper', {
   }
 });
 
+// 투어특가 슬라이드
+new Swiper('.toursale .swiper', {
+  loop: true,
+  disableOnInteraction: false,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  pagination: {
+    el: '.toursale .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+  nextEl: '.swiper .swiper-button-next',
+  prevEl: '.swiper .swiper-button-prev'
+  }
+});

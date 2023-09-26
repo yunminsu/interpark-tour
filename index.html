@@ -30,18 +30,23 @@
     <!-- 상단배너 -->
     <div class="top-banner">.
       <div class="interpark-shop">
-        <img src="./images/icon_shopping.png" alt="인터파크 쇼핑몰">
-        <p>
-          여행에 필요한 상품을 구매할땐?<br>
-          인터파크 쇼핑몰 바로가기
-        </p>
+        <a href="javascript:void(0)">
+          <img src="./images/icon_shopping.png" alt="인터파크 쇼핑몰">
+          <p>
+            여행에 필요한 상품을 구매할땐?<br>
+            인터파크 쇼핑몰 <span style="font-weight: bold;">바로가기</span>
+          </p>
+        </a>
       </div>
       <div class="interpark-book">
-        <img src="./images/icon_book.png" alt="인터파크 도서몰">
-        <p>
-          비행기에서 심심할땐?<br>
-          인터파크 도서 바로가기
-        </p>
+        <a href="javascript:void(0)">
+          <img src="./images/icon_book.png" alt="인터파크 도서몰">
+          <p>
+            여행 가는길에 심심할땐?<br>
+            인터파크 도서 <span style="font-weight: bold;">바로가기</span>
+          </p>
+        </a>
+        <img src="./images/icon_delete.png" alt="상단배너 닫기" class="top-banner-delete">
       </div>
     </div>
 
@@ -163,13 +168,217 @@
     </div>
   </section>
 
+  <!-- 투어 특가 -->
   <section class="toursale inner">
     <h2>투어 특가</h2>
+    <div class="toursale-btn">
+      <button type="button">망설이면 품절</button>
+      <button type="button">패키지</button>
+      <button type="button">국내숙소</button>
+      <button type="button">해외숙소</button>
+    </div>
 
-
-
+    <!-- 배너 -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/tour_sale01.jpg" alt="교토 특가">
+            <p>
+              <span style="color: #1769ff; font-weight: bold;">9~10월 단독 특가 교토 가성비 호텔</span><br>
+              온야도 노노 교토 시치조<br>
+              <span style="font-weight: bold;">169,200원~</span>
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/tour_sale02.jpg" alt="제주도 호캉스">
+            <p>
+              <span style="color: #1769ff; font-weight: bold;">#럭셔리호캉스 #선착순시티뷰</span><br>
+              [제주도]에어카텔3일,티웨이항공탑승<br>
+              <span style="font-weight: bold;">333,400원~</span>
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/tour_sale03.jpg" alt="제주 펜션">
+            <p>
+              <span style="color: #1769ff; font-weight: bold;">인터파크만의 혜택을 누리세요!</span><br>
+              제주 보롬코지펜션<br>
+              <span style="font-weight: bold;">150,000원~</span>
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/tour_sale04.jpg" alt="서귀포 풀빌라">
+            <p>
+              <span style="color: #1769ff; font-weight: bold;">오직 인터파크에서만 가능한 혜택!</span><br>
+              서귀포 후하우스 풀빌라<br>
+              <span style="font-weight: bold;">232,290원~</span>
+            </p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:void(0)">
+            <img src="./images/tour_sale05.jpg" alt="현대프리미엄아울렛 패키지">
+            <p>
+              <span style="color: #1769ff; font-weight: bold;">현대프리미엄아울렛PKG</span><br>
+              오크우드 프리미어 인천<br>
+              <span style="font-weight: bold;">211,510원~</span>
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="swiper-pagination"></div>
   </section>
 
+  <!-- 국내 인기 여행지 -->
+  <section class="krtravel inner">
+    <h2>국내 인기 여행지</h2>
+    <div class="krtravel-menu">
+      <div class="krtravel-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/krtravel01.png" alt="제주">
+          <p>
+            <span style="font-weight: bold; font-size: 16px;">제주</span><br>
+            숙소 4,939개
+          </p>
+        </a>
+      </div>
+      <div class="krtravel-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/krtravel02.png" alt="서울">
+          <p>
+            <span style="font-weight: bold; font-size: 16px;">서울</span><br>
+            숙소 5,945개
+          </p>
+        </a>
+      </div>
+      <div class="krtravel-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/krtravel03.png" alt="부산">
+          <p>
+            <span style="font-weight: bold; font-size: 16px;">부산</span><br>
+            숙소 2,734개
+          </p>
+        </a>
+      </div>
+      <div class="krtravel-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/krtravel04.png" alt="속초">
+          <p>
+            <span style="font-weight: bold; font-size: 16px;">속초</span><br>
+            숙소 800개
+          </p>
+        </a>
+      </div>
+      <div class="krtravel-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/krtravel05.png" alt="인천">
+          <p>
+            <span style="font-weight: bold; font-size: 16px;">인천</span><br>
+            숙소 2,718개
+          </p>
+        </a>
+      </div>
+      <div class="krtravel-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/krtravel06.png" alt="강릉">
+          <p>
+            <span style="font-weight: bold; font-size: 16px;">강릉</span><br>
+            숙소 1,099개
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 여행 정보 -->
+  <section class="travelinfo inner">
+    <h2>여행 정보</h2>
+    <div class="travelinfo-menu">
+      <div class="travelinfo-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/travel_info01.png" alt="동남아 여행지">
+          <p>
+            여기는 몰랐을걸요?<br>
+            로컬이 사랑한 동남아 휴양지
+          </p>
+        </a>
+      </div>
+      <div class="travelinfo-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/travel_info02.png" alt="가성비 여행지">
+          <p>
+            나에게 딱 맞는<br>
+            가성비 여행지는 어디?
+          </p>
+        </a>
+      </div>
+      <div class="travelinfo-btn">
+        <a href="javascript:void(0)">
+          <img src="./images/travel_info03.png" alt="축제">
+          <p>
+            본격 축제는 지금부터<br>
+            한눈에 보는 2023 FW 축제
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 광고 -->
+  <section class="marketing inner">
+    <h2>유용한 정보</h2>
+    <ul class="marketing-menu">
+      <li>
+        <a href="javascript:void(0)">
+          <p>
+            <span style="font-weight: bold; font-size: 16px">면세/환전/렌트/쇼핑</span><br><br>
+            여행 준비 마무리는<br>
+            여기에서!
+          </p>
+        </a>
+        <img src="./images/icon_air.png" alt="비행기">
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <p>
+            <span style="font-weight: bold; font-size: 16px">여행자 보험</span><br><br>
+            여행 준비의 필수 아이템!
+          </p>
+        </a>
+        <img src="./images/icon_nol.png" alt="놀">
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <p>
+            <span style="font-weight: bold; font-size: 16px">쏠쏠한 카드 혜택</span><br><br>
+            다양한 카드 혜택을<br>
+            확인해 보세요!
+          </p>
+        </a>
+        <img src="./images/icon_present.png" alt="선물상자">
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <p>
+            <span style="font-weight: bold; font-size: 16px">면세/환전/렌트/쇼핑</span><br><br>
+            여행 준비 마무리는<br>
+            여기에서!
+          </p>
+        </a>
+        <img src="./images/icon_air.png" alt="비행기">
+      </li>
+
+    </ul>
+  </section>
 
 
 </body>

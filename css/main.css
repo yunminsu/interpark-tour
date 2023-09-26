@@ -1,4 +1,8 @@
 /* 공통 스타일 */
+body {
+  height: 5000px;
+}
+
 .inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -17,11 +21,11 @@ h2 {
 /* ScrollMagic */
 .back-to-position {
   opacity: 0;
-  transition: 1.5s;
+  transition: 4s;
 }
 
 .back-to-position.to-right {
-  transform: translateX(-200px);
+  transform: translateX(0);
 }
 
 .show .back-to-position {
@@ -42,37 +46,60 @@ header {
   box-sizing: border-box;
 }
 
-.top-banner .interpark-shop {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 8px 50px 8px 0;
-  background-color: #ffb1a0;
-}
-
 .top-banner img{
   width: 44px;
   height: 44px;
   margin-right: 10px;
 } 
 
+.top-banner .interpark-shop {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 100px 8px 0;
+  background-color: #ffb1a0;
+}
+
+.top-banner .interpark-shop a {
+  display: flex;
+}
+
 .top-banner .interpark-shop p{
   font-size: 12px;
   line-height: 20px;
+  color: #000;
 } 
-
 
 .top-banner .interpark-book {
   width: 50%;
   display: flex;
-  padding: 8px 0 8px 50px;
+  padding: 8px 0 8px 100px;
   background-color: #FEC695;
+}
+
+.top-banner .interpark-book a {
+  display: flex;
 }
 
 .top-banner .interpark-book p{
   font-size: 12px;
   line-height: 20px;
-} 
+  color: #000;
+}
+
+.top-banner-delete {
+  margin-left: 120px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.top-banner-delete:hover {
+  opacity: 1;
+}
+
+.top-banner.hide {
+  display: none;
+}
 
 
 /* 중간영역 */
@@ -122,6 +149,10 @@ header {
 .user-menu > li > a {
   color: #000;
   font-size: 14px;
+}
+
+.user-menu > li > a:hover {
+  text-decoration: underline;
 }
 
 /* 내비게이션 */
@@ -175,6 +206,7 @@ header {
 
 .main-search ul > li {
   margin: 0 auto;
+  position: relative;
 }
 
 .main-search ul > li > a {
@@ -190,6 +222,23 @@ header {
   opacity: 1;
 }
 
+.main-search ul li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 16px;
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto -30px;
+}
+
+.main-search ul li:first-child::before {
+  display: none;
+}
+
 .main-search input {
   width: 300px;
   height: 52px;
@@ -197,7 +246,6 @@ header {
   padding: 15px;
   border: 1px solid #aaa;
   border-radius: 15px;
-
 }
 
 .main-search > button {
@@ -227,37 +275,36 @@ header {
   border-radius: 5px;
 }
 
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next {
+.main-section .swiper .swiper-button-prev,
+.main-section .swiper .swiper-button-next {
   width: 44px;
-  border: 1px solid #eee;
   border-radius: 100%;
   background-color: #eee;
   opacity: 0.6;
   position: absolute;
 }
 
-.swiper .swiper-button-prev {
+.main-section .swiper .swiper-button-prev {
   left: 0;
 }
 
-.swiper .swiper-button-next {
+.main-section .swiper .swiper-button-next {
   right: 60px;
 }
 
 
-.swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after {
+.main-section .swiper .swiper-button-prev::after,
+.main-section .swiper .swiper-button-next::after {
   font-size: 20px;
   color: #000;
 }
 
-.swiper .swiper-button-prev:hover,
-.swiper .swiper-button-next:hover {
+.main-section .swiper .swiper-button-prev:hover,
+.main-section .swiper .swiper-button-next:hover {
   opacity: 1;
 }
 
-.swiper-pagination-bullet {
+.main-section .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   text-align: center;
@@ -266,10 +313,232 @@ header {
   color:#000;
   opacity: 0.6;
   background: #fff;
-  }
- 
-  .swiper-pagination-bullet-active {
-  color:#fff;
-  background: #1769ff;
+}
+
+.main-section .swiper-pagination-bullet:hover {
   opacity: 1;
-  }
+}
+
+.main-section .swiper-pagination-bullet-active {
+color:#fff;
+background: #1769ff;
+opacity: 1;
+}
+
+/* 투어특가 */
+.toursale {
+  height: 500px;
+}
+
+.toursale h2 {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.toursale-btn {
+  text-align: center;
+}
+
+.toursale-btn button {
+  padding: 8px;
+  margin: 28px 2px 20px 2px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.toursale-btn button:hover {
+  background-color: rgba(17, 69, 255, 0.1);
+  color: #1769ff;
+  font-weight: bold;
+}
+
+.toursale .swiper {
+  max-width: calc(393px * 3 + 10px * 2);
+}
+
+.toursale .swiper-slide {
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+.toursale .swiper-slide a img {
+  width: 100%;
+  height: 240px;
+  border-radius: 5px 5px 0 0;
+}
+
+.toursale .swiper-slide a p {
+  padding: 10px;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.toursale .swiper .swiper-button-prev,
+.toursale .swiper .swiper-button-next {
+  width: 22px;
+  height: 88px;
+  background-color: #eee;
+  opacity: 0.6;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.toursale .swiper .swiper-button-prev {
+  top: 30%;
+  left: 1px;
+}
+
+.toursale .swiper .swiper-button-next {
+  top: 30%;
+  right: 1px;
+}
+
+
+.toursale .swiper .swiper-button-prev::after,
+.toursale .swiper .swiper-button-next::after {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}
+
+.toursale .swiper .swiper-button-prev:hover,
+.toursale .swiper .swiper-button-next:hover {
+  opacity: 0.8;
+}
+
+
+.toursale .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 0.2;
+  position: relative;
+  bottom: 30px;
+}
+
+.toursale .swiper-pagination-bullet:hover {
+  opacity: 0.4;
+}
+
+.toursale .swiper-pagination-bullet-active {
+  background-color: #1769ff;
+  opacity: 1;
+}
+
+/* 국내 인기 여행지 */
+.krtravel h2 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.krtravel-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+.krtravel-btn {
+  text-align: center;
+  margin: 0 15px;
+}
+
+.krtravel-btn a p {
+  color: #000;
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.krtravel-btn a img {
+  transition: 0.6s;
+}
+
+.krtravel-btn a img:hover {
+  transform: scale(1.1);
+}
+
+/* 여행 정보 */
+.travelinfo h2 {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.travelinfo-menu {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.travelinfo-btn {
+  max-width: 380px;
+  min-height: 320px;
+  position: relative;
+}
+
+.travelinfo-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.travelinfo-btn p {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.6;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  position: absolute;
+}
+
+.travelinfo-menu div:first-child p {
+  top: 15px;
+  left:15px;
+}
+
+.travelinfo-menu div:nth-child(2) {
+  margin: 0 30px;
+}
+
+.travelinfo-menu div:nth-child(2) p {
+  top: 15px;
+  left:15px;
+}
+
+.travelinfo-menu div:last-child p {
+  top: 15px;
+  left: 15px;
+}
+
+/* 유용한 정보 */
+.marketing h2 {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.marketing-menu {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.marketing-menu li {
+  max-width: 220px;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+}
+
+.marketing-menu li p {
+  display: inline-block;
+  color: #000;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.marketing-menu li img {
+  margin-left: 20px;
+}
+
