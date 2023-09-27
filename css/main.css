@@ -1,6 +1,7 @@
 /* 공통 스타일 */
 body {
-  height: 5000px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .inner {
@@ -18,8 +19,13 @@ h2 {
   font-weight: bold;
 }
 
+/* gasp */
+.main-section .fade {
+  opacity: 0;
+}
+
 /* ScrollMagic */
-.back-to-position {
+/* .back-to-position {
   opacity: 0;
   transition: 4s;
 }
@@ -31,7 +37,7 @@ h2 {
 .show .back-to-position {
   opacity: 1;
   transform: translateX(0);
-}
+} */
 
 /* 헤더영역 */
 
@@ -171,16 +177,98 @@ header {
   color: #000;
 }
 
-.menu .inner > li > a:hover {
+.menu .inner > li:nth-child(n+2) > a:hover {
   text-decoration: underline;
 }
+
+.menu .inner li:first-child a{
+  display: flex;
+  opacity: 0.6;
+}
+
+.menu .inner li:first-child a span {
+  line-height: 0.8;
+  padding-right: 3px;
+}
+
+.menu .inner li:first-child a:hover {
+  opacity: 1;
+}
+
 
 .menu .inner li:last-child a {
   color: #1769ff;
 }
 
-/* 섹션영역 */
+/* 스크롤 내비게이션 바 */
+.scroll-navbar {
+  border-bottom: 1px solid rgba(200, 200, 200, 0.3);
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 15;
+  display: none;
+}
 
+.scroll-navbar .inner {
+  height: 70px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.scroll-navbar-btn .material-icons {
+  font-size: 40px;
+}
+
+.scroll-navbar-btn a {
+  display: inline-block;
+  font-size: 11px;
+  text-align: center;
+  color: #000;
+  line-height: 1.2;
+  margin-right: 25px;
+}
+
+.scroll-navbar-btn a img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.scroll-navbar-logo {
+  position: absolute;
+  width: 220px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.scroll-navbar-user-menu {
+  height: 40px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.scroll-navbar-user-menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.scroll-navbar-user-menu ul li a {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+
+/* 섹션영역 */
 /* 메인 */
 .main-section {
   display: flex;
@@ -521,14 +609,16 @@ opacity: 1;
 .marketing-menu {
   margin-top: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .marketing-menu li {
-  max-width: 220px;
+  width: 220px;
   padding: 12px;
   border: 1px solid #aaa;
   border-radius: 15px;
+  margin: 0 20px;
+  position: relative;
 }
 
 .marketing-menu li p {
@@ -539,6 +629,139 @@ opacity: 1;
 }
 
 .marketing-menu li img {
-  margin-left: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
+/* 푸터 영역 */
+/* 배너 */
+.footer_bannerbg {
+  margin-top: 120px;
+  height: 150px;
+  background-image: url("/images/footer_bannerbg.gif");
+}
+
+.footer_bannerbg .inner {
+  height: 150px;
+}
+
+.footer_bannerbg .inner img {
+  width: 100%;
+  height: 100%;
+}
+
+/* corp */
+.footer-corp {
+  border-bottom: 1px solid #aaa;
+}
+
+.footer-corplist {
+  display: flex;
+}
+
+.footer-corplist li {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.footer-corplist li a {
+  font-size: 13px;
+  color: #000;
+}
+
+.footer-corplist li a:hover {
+  text-decoration: underline;
+}
+
+.footer-corplist li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 16px;
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto -20px;
+}
+
+.footer-corplist li:first-child::before {
+  display: none;
+}
+
+/* info */
+.footer-info {
+  margin-top: 20px;
+}
+
+.footer-infolist {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-infolist p {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0 30px;
+}
+
+.footer-infolist p span {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* notice */
+.footer_notice {
+  margin: 30px 0;
+}
+
+.footer_notice .center {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_notice .center p {
+  font-size: 12px;
+  line-height: 1.3;
+  opacity: 0.6;
+}
+
+/* 반응형 작업 */
+@media screen and (max-width: 767px) {
+  header .top-banner,
+   header .header-middle,
+   header .menu {
+     display: none;
+   }
+ }
+ 
+ @media screen and (min-width: 480px) and (max-width: 767px) {
+  .travelinfo-menu {
+    flex-wrap: wrap;
+   }
+
+  .krtravel-menu a {
+  }
+
+   .main-section {
+    flex-wrap: wrap;
+   }
+   
+   .main-search {
+    margin: 10px auto;
+   }
+
+   .scroll-navbar {
+    display: none !important
+   }
+
+   .footer-corp {
+    display: none;
+   }
+
+   .footer-info {
+    display: none;
+   }
+ }
