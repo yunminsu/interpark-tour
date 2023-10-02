@@ -524,6 +524,7 @@ opacity: 1;
 
 .krtravel-menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
 
@@ -732,15 +733,22 @@ opacity: 1;
 @media screen and (max-width: 767px) {
   header .top-banner,
    header .header-middle,
-   header .menu {
+   header .menu,
+   .main-section .swiper {
      display: none;
    }
- }
  
- @media screen and (min-width: 480px) and (max-width: 767px) {
   .travelinfo-menu {
     flex-wrap: wrap;
    }
+
+  .travelinfo-menu div {
+    padding-bottom: 20px;
+  }
+
+  .travelinfo-btn a img {
+    
+  }
 
   .krtravel-menu a {
   }
@@ -755,6 +763,16 @@ opacity: 1;
 
    .scroll-navbar {
     display: none !important
+   }
+
+   .marketing-menu {
+    flex-wrap: wrap;
+   }
+
+   .marketing-menu li {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
    }
 
    .footer-corp {
