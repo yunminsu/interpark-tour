@@ -745,7 +745,7 @@ opacity: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 40px;
+  margin: 0 30px;
 }
 
 .responsive-header-wapper a span {
@@ -777,15 +777,11 @@ opacity: 1;
    }
 
   .travelinfo-menu div {
-    margin: 0;
     padding-bottom: 20px;
   }
 
-  .travelinfo-btn a img {
-    
-  }
-
-  .krtravel-menu a {
+  .travelinfo-menu div:nth-child(2) {
+    margin: 0;
   }
 
    .main-section {
